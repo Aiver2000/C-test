@@ -1,0 +1,7 @@
+#include <stdio.h>
+int main ()
+{
+	printf("666");
+    return 0;
+}
+// 以命令行的形式上传
