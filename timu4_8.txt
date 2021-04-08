@@ -1,0 +1,122 @@
+leetcode 976 链表中间节点
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* middleNode(struct ListNode* head){
+    struct ListNode* fast = head,*slow = head;
+    while(fast && fast->next)
+    {
+        slow = slow ->next;
+        fast = fast ->next->next;
+    }
+    return slow;
+}
+
+leetcode 206 反转链表
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* reverseList(struct ListNode* head){
+    struct ListNode* cur = head;
+    struct ListNode* newHead = NULL;
+    while(cur)
+    {
+        struct ListNode* next = cur-> next;
+        cur -> next = newHead;
+        newHead = cur;
+        cur = next ;
+    }
+
+    return newHead;
+}
+
+lettcode 203 移除链表元素
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+
+
+struct ListNode* removeElements(struct ListNode* head, int val){
+    struct ListNode* guardHead = (struct ListNode*)malloc(sizeof(struct ListNode));
+    guardHead->next = head;
+    
+    struct ListNode* prev = guardHead;
+    struct ListNode* cur = head;
+
+    while(cur)
+    {
+        if(cur->val == val)
+        {
+            struct ListNode* next = cur -> next;
+            prev -> next = next ;
+            free(cur);
+            cur = next;
+        }
+        else
+        {
+            prev = cur;
+            cur = cur -> next;
+        }
+    }
+
+    head = guardHead -> next;
+    free(guardHead);
+    return head;
+
+}
+
+牛客 3703  链表中倒数第k个节点
+/**
+ * struct ListNode {
+ *  int val;
+ *  struct ListNode *next;
+ * };
+ */
+ 
+/**
+ *
+ * @param pListHead ListNode类
+ * @param k int整型
+ * @return ListNode类
+ */
+struct ListNode* FindKthToTail(struct ListNode* pListHead, int k ) {
+ 
+     
+    if(pListHead == NULL || k<=0)
+    {
+        return NULL;
+    }
+    struct ListNode* fast = pListHead;
+     
+    while(k--)
+    {
+        if(fast == NULL)
+            return NULL;
+        fast = fast ->next;
+    }
+     
+    struct ListNode* slow = pListHead;
+    while(fast != NULL)
+    {
+        slow = slow ->next;
+        fast = fast -> next;
+    }
+     
+    return slow;
+     }
