@@ -1,0 +1,225 @@
+
+#160 相交链表
+
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+struct ListNode *getIntersectionNode(struct ListNode *headA, struct ListNode *headB) {
+    if(headA == NULL || headB == NULL)
+        return NULL;
+    struct ListNode*curA = headA,*curB = headB;
+    int lenA = 0,lenB = 0;
+    while(curA)
+    {
+        curA = curA -> next;
+        lenA++;
+    }
+    while(curB)
+    {
+        curB = curB -> next;
+        lenB++;
+    }
+
+    struct ListNode* longList = headA,*shortList = headB;
+    if(lenB>lenA)
+    {
+        longList =headB;
+        shortList = headA;
+    }
+
+    int gap = abs(lenB -lenA);
+
+    while(gap--)
+    {
+        longList =longList->next;
+    }
+
+    while(longList  != shortList)
+    {
+        longList = longList ->next;
+        shortList = shortList ->next;
+    }
+    return longList;
+
+
+}
+
+
+
+* Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     struct ListNode *next;
+ * };
+ */
+#21 合并链表
+
+struct ListNode* mergeTwoLists(struct ListNode* l1, struct ListNode* l2){
+    // if(l1 == NULL)
+    //     return l2;
+    // if(l2 == NULL)
+    //     return l1;
+
+    struct ListNode* head = NULL,*tail = NULL;
+    head = tail = (struct ListNode*)malloc(sizeof(struct ListNode));
+    tail -> next = NULL;
+
+    //先取一个小的去做第一个节点，方便后面尾插
+    // if(l1->val <l2 ->val)
+    // {
+    //     head = tail = l1;
+    //     l1 = l1->next;
+    // }
+    // else
+    // {
+    //     head = tail = l2;
+    //     l2 = l2->next;
+    // }
+    
+    while(l1 && l2)
+    {
+        //取小的尾插到新链表
+        if(l1->val <l2 ->val)
+        {
+            tail ->next = l1;
+            l1 = l1 ->next;
+        }
+        else
+        {
+            tail -> next = l2;
+            l2 = l2->next;
+
+        }
+        tail = tail ->next;
+
+    }
+
+    if(l1)
+    {
+        tail -> next = l1;
+    }
+    if(l2)
+    {
+        tail -> next = l2;
+    }
+    struct ListNode* node = head;
+    head = head -> next;
+    free(node);
+    node = NULL;
+    return head;
+}
+OR36
+
+/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};*/
+class PalindromeList {
+public:
+    struct ListNode* middleNode(struct ListNode* head)
+    {
+        struct ListNode* fast = head,*slow = head;
+        while(fast && fast -> next)
+        {
+            slow = slow->next;
+            fast = fast ->next->next;
+        }
+        return slow;
+    }
+     
+     
+     
+    struct ListNode* reverseList(struct ListNode* head)
+    {
+        struct ListNode* cur = head;
+        struct ListNode* newHead = NULL;
+        while(cur)
+        {
+            struct ListNode* next = cur -> next;
+             
+            cur->next = newHead;
+            newHead = cur;
+             
+            cur = next;
+        }
+        return newHead;
+    }
+     
+     
+     
+     
+    bool chkPalindrome(ListNode* A) {
+     
+        //1.先找到中间节点
+        struct ListNode* mid = middleNode(A);
+        struct ListNode* rHead = reverseList(mid);
+        while(A && rHead)
+        {
+            if(A->val != rHead->val)
+            {
+                return false;
+            }
+            else
+            {
+                A = A->next;
+                rHead = rHead ->next;
+            }
+        }
+        return true;
+    }
+};
+
+CM11
+
+/*
+struct ListNode {
+    int val;
+    struct ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};*/
+class Partition {
+public:
+    ListNode* partition(ListNode* pHead, int x) {
+    struct ListNode* lessHead,*lessTail,*greatHead,*greatTail;
+    lessHead = lessTail = (struct ListNode*)malloc(sizeof(struct ListNode));
+    greatHead = greatTail = (struct ListNode*)malloc(sizeof(struct ListNode));
+    lessTail->next = NULL;
+    greatTail->next = NULL;
+     
+    struct ListNode* cur = pHead;
+    while(cur)
+    {
+        if(cur -> val <x)
+        {
+            lessTail ->next = cur;
+            lessTail = lessTail -> next;
+             
+        }
+        else
+        {
+            greatTail ->next = cur;
+            greatTail = greatTail ->next;
+        }
+        cur = cur -> next;
+    }
+    lessTail ->next = greatHead ->next;
+    greatTail ->next = NULL;
+     
+    pHead = lessHead -> next;
+        free(lessHead);
+        free(greatHead);
+         
+        return pHead;
+     
+         
+         
+         
+ 
+    }
+};
