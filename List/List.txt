@@ -1,0 +1,198 @@
+List.c
+```c
+#define _CRT_SECURE_NO_WARNINGS 1
+#include "List.h"
+
+ListNode* BuyListNode(LTDateType x)
+{
+	ListNode* newnode = (ListNode*)malloc(sizeof(ListNode));
+	newnode->next = NULL;
+	newnode->prev = NULL;
+	newnode->data = x;
+	return newnode;
+}
+
+
+ListNode* ListCreate()
+{
+	ListNode* phead = BuyListNode(0);
+	phead->next = phead;
+	phead->prev = phead;
+	return phead;
+
+}
+
+void ListPushBack(ListNode* pHead, LTDateType x)
+{
+	assert(pHead);
+	ListNode* tail = pHead->prev;
+	ListNode* newnode = BuyListNode(x);
+
+	tail->next = newnode;
+	newnode->next = pHead;
+	newnode->prev = tail;
+	pHead->prev = newnode;
+}
+
+void ListPrint(ListNode* pHead)
+{
+	ListNode* cur = pHead->next;
+	while (cur != pHead)
+	{
+		printf("%d ", cur->data);
+		cur = cur->next;
+	}
+	printf("\n");
+
+}
+void ListDestory(ListNode* pHead)
+{
+	assert(pHead);
+	ListNode* cur = pHead->next;
+	while (cur != pHead)
+	{
+		ListNode* next = cur->next;
+		free(cur);
+		cur = next;
+	}
+	free(pHead);
+	pHead = NULL;
+}
+
+
+void ListPushFront(ListNode* pHead, LTDateType x)
+{
+	assert(pHead);
+	ListNode* first = pHead->next;
+	ListNode* newnode = BuyListNode(x);
+	pHead->next = newnode;
+	newnode->prev = pHead;
+	newnode->next = first;
+	first->prev = newnode;
+}
+
+
+void ListPopFront(ListNode* pHead)
+{
+	assert(pHead);
+	assert(pHead->next != pHead);
+
+	ListNode* first = pHead->next;
+	ListNode* second = first->next;
+	free(first);
+	pHead->next = second;
+	second->prev = pHead;
+}
+
+void ListPopBack(ListNode* pHead)
+{
+	assert(pHead);
+	ListNode* tail = pHead->prev;
+	ListNode* tailPrev = tail->prev;
+	free(tail);
+	tailPrev->next = pHead;
+	pHead->prev = tailPrev;
+}
+
+
+ListNode* ListFind(ListNode* pHead, LTDateType x)
+{
+	assert(pHead);
+	
+	ListNode* cur = pHead->next;
+	while (cur != pHead)
+	{
+		if (cur->data == x)
+		{
+			return cur;
+		}
+		cur = cur->next;
+	}
+	return NULL;
+}
+
+
+void ListInsert(ListNode* pos, LTDateType x)
+{
+	assert(pos);
+	ListNode* prev = pos->prev;
+	ListNode* newnode = BuyListNode(x);
+	prev->next = newnode;
+	newnode->prev = prev;
+	newnode->next = pos;
+	pos->prev = newnode;
+}
+
+
+void ListErase(ListNode* pos)
+{
+	assert(pos);
+	ListNode* prev = pos->prev;
+	ListNode* next = pos->next;
+	prev->next = next;
+	next->prev = prev;
+	free(pos);
+}
+
+
+
+int ListEmpty(ListNode* pHead)
+{
+	return pHead->next == pHead ? 1 : 0;
+}
+
+int ListSize(ListNode* pHead)
+{
+	assert(pHead);
+	int size = 0;
+	ListNode* cur = pHead->next;
+	while (cur != pHead)
+	{
+		size++;
+		cur = cur->next;
+	}
+	return size;
+}
+```
+List.h
+
+```c
+#pragma once
+#include <stdio.h>
+#include <assert.h>
+#include <stdlib.h>
+typedef int LTDateType;
+typedef struct ListNode
+{
+	LTDateType data;
+	struct ListNode* prev;
+	struct ListNode* next;
+}ListNode;
+
+
+ListNode* BuyListNode(LTDateType x);
+//创建返回链表头结点
+ListNode* ListCreate();
+//销毁链表
+void ListDestory(ListNode* pHead);
+//双向链表打印
+void ListPrint(ListNode* pHead);
+//双向链表尾插
+void ListPushBack(ListNode* pHead, LTDateType x);
+//双向链表头插
+void ListPushFront(ListNode* pHead, LTDateType x);
+//双向链表头删
+void ListPopFront(ListNode* pHead);
+//双向链表尾删
+void ListPopBack(ListNode* pHead);
+//双向链表查找
+ListNode* ListFind(ListNode* pHead, LTDateType x);
+//双向链表在pos位前插入
+void ListInsert(ListNode* pos, LTDateType x);
+//双向链表删除pos位置的节点
+void ListErase(ListNode* pos);
+//判空
+int ListEmpty(ListNode* pHead);
+//大小
+int ListSize(ListNode* pHead);
+```
