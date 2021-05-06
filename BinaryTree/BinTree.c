@@ -1,3 +1,6 @@
+#include "BinaryTree.h"
+#include "queue.h"
+
 void PrevOrder(BTNode* root)
 {
 	if (root == NULL)
@@ -89,5 +92,66 @@ int BinaryTreeLeveKSize(BTNode* root, int k)
 		return 1;
 	return BinaryTreeLeveKSize(root->_left, k - 1) + BinaryTreeLeveKSize(root->_right, k - 1);
 }
-void BinaryTreeLeveOrder(BTNode* root);
-int BinaryTreeComplete(BTNode* root);
+void BinaryTreeLeveOrder(BTNode* root)
+{
+	Queue q;
+	QueueInit(&q);
+	if (root)
+	{
+		QueuePush(&q, root);
+	}
+	while (!QueueEmpty(&q))
+	{
+		BTNode* front = QueueFront(&q);
+		QueuePop(&q);
+
+		printf("%c ", front->data);
+
+		if (front->_left)
+		{
+			QueuePush(&q, front->_left);
+		}
+		if (front->_right)
+		{
+			QueuePush(&q, front->_right);
+		}
+
+	}
+
+
+
+	QueueDestory(&q);
+}
+bool BinaryTreeComplete(BTNode* root)
+{
+	Queue q;
+	QueueInit(&q);
+	if (root)
+	{
+		QueuePush(&q, root);
+
+	}
+	while (!QueueEmpty(&q))
+	{
+		BTNode* front = QueueFront(&q);
+		QueuePop(&q);
+		if (front== NULL)
+		{
+			break;
+		}
+		QueuePush(&q, front->_left);
+		QueuePush(&q, front->_right);
+
+	}
+	while (!QueueEmpty(&q))
+	{
+		BTNode* front = QueueFront(&q);
+		QueuePop(&q);
+		if (front)
+			return false;
+	}
+
+	QueueDestory(&q);
+	return true;
+}
+
