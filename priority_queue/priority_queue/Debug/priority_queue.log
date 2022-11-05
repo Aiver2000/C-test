@@ -1,0 +1,29 @@
+﻿生成启动时间为 2021/9/14 22:46:58。
+     1>项目“E:\学习\BIT\vs代码\c_test\priority_queue\priority_queue\priority_queue.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\app\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
+         test.cpp
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(84): error C2059: 语法错误:“)”
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(95): error C2143: 语法错误 : 缺少“;”(在“void”的前面)
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(97): error C2065: “_con”: 未声明的标识符
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(97): error C2228: “.size”的左边必须有类/结构/联合
+                 类型是“unknown-type”
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(97): error C2660: “std::swap”: 函数不接受 1 个参数
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(98): error C2065: “_con”: 未声明的标识符
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(98): error C2228: “.pop_back”的左边必须有类/结构/联合
+                 类型是“unknown-type”
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(99): error C3861: “AdjustDown”:  找不到标识符
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(101): error C2059: 语法错误:“private”
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(102): error C2146: 语法错误: 缺少“;”(在标识符“_con”的前面)
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(102): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(103): error C2146: 语法错误: 缺少“;”(在标识符“com”的前面)
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(103): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(105): error C2059: 语法错误:“}”
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\priority_queue.h(105): error C2143: 语法错误 : 缺少“;”(在“}”的前面)
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\test.cpp(6): error C2143: 语法错误 : 缺少“;”(在“{”的前面)
+     1>e:\学习\bit\vs代码\c_test\priority_queue\priority_queue\test.cpp(6): error C2447: “{”: 缺少函数标题(是否是老式的形式表?)
+     1>已完成生成项目“E:\学习\BIT\vs代码\c_test\priority_queue\priority_queue\priority_queue.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:00.67

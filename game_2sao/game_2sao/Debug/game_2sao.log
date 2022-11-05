@@ -1,0 +1,17 @@
+﻿生成启动时间为 2021/1/25 17:19:33。
+     1>项目“E:\学习\140题\c_test\game_2sao\game_2sao\game_2sao.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\app\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt test.c
+         test.c
+     1>e:\学习\140题\c_test\game_2sao\game_2sao\game.h(3): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+     1>e:\学习\140题\c_test\game_2sao\game_2sao\test.c(23): warning C4013: “InitBoard”未定义；假设外部返回 int
+     1>e:\学习\140题\c_test\game_2sao\game_2sao\test.c(28): warning C4013: “DisplayBoard”未定义；假设外部返回 int
+       Link:
+         E:\app\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\学习\140题\c_test\game_2sao\Debug\game_2sao.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\学习\140题\c_test\game_2sao\Debug\game_2sao.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\学习\140题\c_test\game_2sao\Debug\game_2sao.lib" /MACHINE:X86 Debug\game.obj
+         Debug\test.obj
+         game_2sao.vcxproj -> E:\学习\140题\c_test\game_2sao\Debug\game_2sao.exe
+     1>已完成生成项目“E:\学习\140题\c_test\game_2sao\game_2sao\game_2sao.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.36

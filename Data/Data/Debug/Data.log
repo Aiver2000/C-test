@@ -1,0 +1,32 @@
+﻿生成启动时间为 2021/6/3 23:19:59。
+     1>项目“E:\学习\140题\c_test\Data\Data\Data.vcxproj”在节点 2 上(Rebuild 个目标)。
+     1>ClCompile:
+         E:\app\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Data.cpp Test.cpp
+         Test.cpp
+         Data.cpp
+     1>e:\学习\140题\c_test\data\data\data.cpp(177): error C2511: “bool Date::operator ==(const Date &) const”:“Date”中没有找到重载的成员函数
+                 e:\学习\140题\c_test\data\data\data.h(44) : 参见“Date”的声明
+     1>e:\学习\140题\c_test\data\data\data.cpp(179): error C2597: 对非静态成员“Date::_year”的非法引用
+     1>e:\学习\140题\c_test\data\data\data.cpp(179): error C3867: “Date::_year”:  函数调用缺少参数列表；请使用“&Date::_year”创建指向成员的指针
+     1>e:\学习\140题\c_test\data\data\data.cpp(180): error C2597: 对非静态成员“Date::_month”的非法引用
+     1>e:\学习\140题\c_test\data\data\data.cpp(180): error C3867: “Date::_month”:  函数调用缺少参数列表；请使用“&Date::_month”创建指向成员的指针
+     1>e:\学习\140题\c_test\data\data\data.cpp(180): error C2597: 对非静态成员“Date::_day”的非法引用
+     1>e:\学习\140题\c_test\data\data\data.cpp(180): error C3867: “Date::_day”:  函数调用缺少参数列表；请使用“&Date::_day”创建指向成员的指针
+     1>e:\学习\140题\c_test\data\data\data.cpp(185): error C2511: “bool Date::operator <(const Date &) const”:“Date”中没有找到重载的成员函数
+                 e:\学习\140题\c_test\data\data\data.h(44) : 参见“Date”的声明
+     1>e:\学习\140题\c_test\data\data\data.cpp(186): error C2671: “Date::<”: 静态成员函数没有“this”指针
+     1>e:\学习\140题\c_test\data\data\data.cpp(190): error C2511: “bool Date::operator >=(const Date &) const”:“Date”中没有找到重载的成员函数
+                 e:\学习\140题\c_test\data\data\data.h(44) : 参见“Date”的声明
+     1>e:\学习\140题\c_test\data\data\data.cpp(191): error C2671: “Date::>=”: 静态成员函数没有“this”指针
+     1>e:\学习\140题\c_test\data\data\data.cpp(195): error C2511: “bool Date::operator <=(const Date &) const”:“Date”中没有找到重载的成员函数
+                 e:\学习\140题\c_test\data\data\data.h(44) : 参见“Date”的声明
+     1>e:\学习\140题\c_test\data\data\data.cpp(196): error C2671: “Date::<=”: 静态成员函数没有“this”指针
+     1>e:\学习\140题\c_test\data\data\data.cpp(200): error C2511: “bool Date::operator !=(const Date &) const”:“Date”中没有找到重载的成员函数
+                 e:\学习\140题\c_test\data\data\data.h(44) : 参见“Date”的声明
+     1>e:\学习\140题\c_test\data\data\data.cpp(201): error C2671: “Date::!=”: 静态成员函数没有“this”指针
+         正在生成代码...
+     1>已完成生成项目“E:\学习\140题\c_test\Data\Data\Data.vcxproj”(Rebuild 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.03

@@ -1,0 +1,49 @@
+﻿生成启动时间为 2022/9/26 0:22:28。
+     1>项目“E:\学习\BIT\vs代码\数据结构进阶\Hash\Hash\Hash.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         E:\app\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Test.cpp
+         Test.cpp
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bitset.h(43): error C2143: 语法错误 : 缺少“;”(在“<”的前面)
+                 e:\学习\bit\vs代码\数据结构进阶\hash\hash\bitset.h(44): 参见对正在编译的类 模板 实例化“atm::BitSet<N>”的引用
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bitset.h(43): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bitset.h(43): error C2238: 意外的标记位于“;”之前
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(8): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(8): error C2143: 语法错误 : 缺少“,”(在“&”的前面)
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(11): error C2065: “s”: 未声明的标识符
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(11): error C3312: 未找到类型“unknown-type”的可调用“begin”函数
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(11): error C3312: 未找到类型“unknown-type”的可调用“end”函数
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(13): error C2065: “ch”: 未声明的标识符
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(23): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(23): error C2143: 语法错误 : 缺少“,”(在“&”的前面)
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(26): error C2065: “s”: 未声明的标识符
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(26): error C2228: “.size”的左边必须有类/结构/联合
+                 类型是“unknown-type”
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(28): error C2065: “s”: 未声明的标识符
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(45): error C4430: 缺少类型说明符 - 假定为 int。注意:  C++ 不支持默认 int
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(45): error C2143: 语法错误 : 缺少“,”(在“&”的前面)
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(47): error C2065: “s”: 未声明的标识符
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(47): error C3312: 未找到类型“unknown-type”的可调用“begin”函数
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(47): error C3312: 未找到类型“unknown-type”的可调用“end”函数
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(49): error C2065: “ch”: 未声明的标识符
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(103): error C2065: “string”: 未声明的标识符
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(103): error C2923: “BloomFilter”: 对于参数“K”，“string”不是有效的 模板 类型变量
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(103): error C2133: “bf”: 未知的大小
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(103): error C2512: “BloomFilter”: 没有合适的默认构造函数可用
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(104): error C2662: “void BloomFilter<N,K,Hash1,Hash2,Hash3>::Set(const K &)”: 不能将“this”指针从“BloomFilter”转换为“BloomFilter<N,K,Hash1,Hash2,Hash3> &”
+                 原因如下:  无法从“BloomFilter”转换为“BloomFilter<N,K,Hash1,Hash2,Hash3>”
+                 转换要求第二个用户定义的转换运算符或构造函数
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(105): error C2662: “void BloomFilter<N,K,Hash1,Hash2,Hash3>::Set(const K &)”: 不能将“this”指针从“BloomFilter”转换为“BloomFilter<N,K,Hash1,Hash2,Hash3> &”
+                 原因如下:  无法从“BloomFilter”转换为“BloomFilter<N,K,Hash1,Hash2,Hash3>”
+                 转换要求第二个用户定义的转换运算符或构造函数
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(106): error C2662: “void BloomFilter<N,K,Hash1,Hash2,Hash3>::Set(const K &)”: 不能将“this”指针从“BloomFilter”转换为“BloomFilter<N,K,Hash1,Hash2,Hash3> &”
+                 原因如下:  无法从“BloomFilter”转换为“BloomFilter<N,K,Hash1,Hash2,Hash3>”
+                 转换要求第二个用户定义的转换运算符或构造函数
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\bloomfilter.h(107): error C2662: “void BloomFilter<N,K,Hash1,Hash2,Hash3>::Set(const K &)”: 不能将“this”指针从“BloomFilter”转换为“BloomFilter<N,K,Hash1,Hash2,Hash3> &”
+                 原因如下:  无法从“BloomFilter”转换为“BloomFilter<N,K,Hash1,Hash2,Hash3>”
+                 转换要求第二个用户定义的转换运算符或构造函数
+     1>e:\学习\bit\vs代码\数据结构进阶\hash\hash\test.cpp(80): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+     1>已完成生成项目“E:\学习\BIT\vs代码\数据结构进阶\Hash\Hash\Hash.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.46
